@@ -35,6 +35,7 @@
             gotools
             gopls
             gomod2nix.legacyPackages.${system}.gomod2nix
+            goreleaser
           ];
         }
       );
