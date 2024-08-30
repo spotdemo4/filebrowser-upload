@@ -328,7 +328,7 @@ func (e *filebrowser) share(token string) (shareResponse, error) {
 
 	// Create share request
 	jsonBody := []byte(`{}`)
-	req, err := http.NewRequest(http.MethodPost, fmt.Sprintf("%s/api/share%s/%s+", e.Url, e.Directory, e.File), bytes.NewReader(jsonBody))
+	req, err := http.NewRequest(http.MethodPost, fmt.Sprintf("%s/api/share%s/%s", e.Url, e.Directory, e.File), bytes.NewReader(jsonBody))
 	if err != nil {
 		return shareResponse{}, err
 	}
